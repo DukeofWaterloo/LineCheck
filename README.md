@@ -14,23 +14,23 @@ Line Check is a deep learning project that automatically detects and classifies 
 - **Training**: Fine-tuning approach with progressive resizing
 - **Deployment**: Docker containerization for easy deployment
 
-## 📁 Project Structure
-```
-Line Check/
-├── notebooks/              # Jupyter notebooks
-│   ├── insulator_classification.ipynb  # Main training notebook
-│   └── archive/           # Previous versions
-├── models/                # Trained models
-│   └── checkpoints/      # Model checkpoints
-├── api/                  # FastAPI application
-├── Train/                 # Training data
-│   ├── Images/           # Image dataset
-│   └── labels_v1.2.json  # Image annotations
-├── Dockerfile            # Docker configuration
-├── .dockerignore         # Docker build exclusions
-├── requirements.txt       # Python dependencies
-└── README.md
-```
+## 📊 Model Performance
+The model achieves strong performance in identifying damaged insulators:
+- High accuracy (99.38%) in distinguishing between normal and damaged insulators
+- Robust performance across different lighting conditions and angles
+- Fast inference time suitable for real-world applications
+- High convergence led to optimal performance by epoch 2
+
+
+| Epoch | Train Loss | Valid Loss | Accuracy | Time |
+|-------|------------|------------|----------|------|
+| 0     | 0.548220   | 0.334112   | 87.19%   | 00:51 |
+| 1     | 0.414018   | 0.138690   | 96.56%   | 00:51 |
+| 2     | 0.291720   | 0.051663   | 99.38%   | 00:51 |
+| 3     | 0.206916   | 0.033020   | 99.38%   | 00:51 |
+| 4     | 0.148413   | 0.031045   | 99.38%   | 00:52 |
+
+
 
 ## 🏁 Getting Started
 
@@ -132,13 +132,23 @@ curl -X POST "http://localhost:8000/predict" \
     "confidence_threshold": 0.5
 }
 ```
-
-## 📊 Model Performance
-The model achieves strong performance in identifying damaged insulators:
-- High accuracy in distinguishing between normal and damaged insulators
-- Robust performance across different lighting conditions and angles
-- Fast inference time suitable for real-world applications
-
+## 📁 Project Structure
+```
+Line Check/
+├── notebooks/              # Jupyter notebooks
+│   ├── insulator_classification.ipynb  # Main training notebook
+│   └── archive/           # Previous versions
+├── models/                # Trained models
+│   └── checkpoints/      # Model checkpoints
+├── api/                  # FastAPI application
+├── Train/                 # Training data
+│   ├── Images/           # Image dataset
+│   └── labels_v1.2.json  # Image annotations
+├── Dockerfile            # Docker configuration
+├── .dockerignore         # Docker build exclusions
+├── requirements.txt       # Python dependencies
+└── README.md
+```
 ## 🔮 Future Improvements
 - Implement real-time detection
 - Add multi-class classification for different types of damage
