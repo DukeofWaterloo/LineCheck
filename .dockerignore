@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Dataset and training files
+Train/
+InsulatorDataSet-master/
+notebooks/
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+README.md
+*.log 

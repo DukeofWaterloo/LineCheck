@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Model files
+*.pkl
+*.pth
+*.h5
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data files
+*.zip
+Train/Images/*
+InsulatorDataSet-master/
+*.csv 
